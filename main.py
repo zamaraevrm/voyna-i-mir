@@ -12,3 +12,8 @@ def random_char(char: str):
         if rnd <= total:
 
             return k
+
+
+
+
+
