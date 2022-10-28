@@ -1,19 +1,18 @@
 import random
+from dictgenerate import dictgenerate
+from filegenerate import filegenerate
+from gertext import gertext 
 
 
-def random_char(char: str):
-    seq = 1
-    rnd = random.randint(0, sum(seq.values()))
-    total = 0
-
-    for k, v in seq.items():
-        total += v
-
-        if rnd <= total:
-
-            return k
+def main():
+    g = gertext('voyna-i-mir.txt')
+    d = dictgenerate(g)
+    f = filegenerate(d, 'out.txt')
+    f.outfilegenerate()
 
 
+if __name__ == '__main__' :
+    main()
 
 
 

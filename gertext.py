@@ -1,4 +1,4 @@
 def gertext(filename: str) -> str:
-    with open(filename) as file:
+    with open(filename,'r') as file:
             for line in file:
                 yield line
