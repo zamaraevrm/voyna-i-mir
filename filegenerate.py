@@ -19,8 +19,9 @@ class filegenerate():
                 return k
     
     def outfilegenerate(self):
-        with open(self.__outfilename, 'w') as file:
-            char: str = random.choice(self.stat.keys())  # type: ignore
+        with open(self.__outfilename, 'w',encoding='utf-8') as file:
+            keys = list(self.stat.keys())
+            char: str = str(random.choice(keys))  # type: ignore
             for i in range(1000):
                 file.write(char)
                 char = self.__random_char(char)
