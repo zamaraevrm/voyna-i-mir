@@ -9,7 +9,7 @@ def dictgenerate(generator) -> dict:
             if char not in dictionary.keys():
                 dictionary[char] = {c: line.count(char + c) for c in chars}
             else:
-                dictionary[char] += {c: line.count(char + c) for c in chars}
+                dictionary[char] = {c: line.count(char + c) for c in chars}
     return dictionary
     
 
